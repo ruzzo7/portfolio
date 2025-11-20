@@ -24,7 +24,7 @@
             <h2>About Me</h2>
             <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExcTYydGE1bWluZGpvbWMwY2t5Zng3bThmZW9uZG53ZWc0MzMzOTVqMCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/KyAbvgaca37zwMh54p/giphy.gif" alt="Profile Picture" class="profile-pic" width="400" height="500">
             <p>HI I'm Roshan Kumar Mukhiya, a Full Stack Developer and Computer Science student at Biratnagar International College (BIC), currently in my second year. I'm passionate about building dynamic, user-friendly web applications using JavaScript, React, Node.js, and Java, and aim to create innovative software that solves real-world problems</p>
-            <button class="btn btn-primary">Download Resume</button>
+            <button class="btn btn-primary" onclick="downloadResume()">Download Resume</button>
         </section>
 
         <section id="projects">
@@ -32,12 +32,12 @@
             <div class="project">
                 <h3>Banking System</h3>
                 <p>I have created one banking system using Java in 2nd semester for final assignments.</p>
-                <button class="btn btn-secondary">View Project</button>
+                <button class="btn btn-secondary" onclick="viewProject('Banking System')">View Project</button>
             </div>
             <div class="project">
                 <h3>Smart Canteen System</h3>
                 <p>During sep, we have to create a system as a final work. It was group project so we created smart canteen system using HTML, CSS, JavaScript, MySQL, Node.js</p>
-                <button class="btn btn-secondary">View Project</button>
+                <button class="btn btn-secondary" onclick="viewProject('Smart Canteen System')">View Project</button>
             </div>
         </section>
 
@@ -53,17 +53,43 @@
             </div>
         </section>
 
+        <section id="media">
+            <h2>Media Gallery</h2>
+
+            
+            
+            <div class="media-container">
+                <div class="video-section">
+                    <h3>Messi kick</h3>
+                    <video width="320" height="240" controls>
+                        <source src="Portfolio.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+
+                <div class="audio-section">
+                    <h3>Nature Audio</h3>
+                    <audio controls>
+                        <source src="Portfolio.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+            </div>
+        </section>
+
         <section id="contact">
             <h2>Contact Me</h2>
             <p>Email: roshanmukhiya77799@gmail.com</p>
-            <button class="btn btn-primary">Send Email</button>
-            <button class="btn btn-outline">Connect on LinkedIn</button>
-            <button class="btn btn-outline">GitHub Profile</button>
+            <button class="btn btn-primary" onclick="sendEmail()">Send Email</button>
+            <button class="btn btn-outline" onclick="connectLinkedIn()">Connect on LinkedIn</button>
+            <button class="btn btn-outline" onclick="viewGitHub()">GitHub Profile</button>
         </section>
     </main>
 
     <footer>
         <p>&copy; 2025 My Portfolio</p>
     </footer>
+
+    <script src="portfolio.js"></script>
 </body>
 </html>
