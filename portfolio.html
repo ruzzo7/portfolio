@@ -3,91 +3,170 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Roshan Kumar Mukhiya | Portfolio</title>
     <link rel="stylesheet" href="portfolio.css">
 </head>
 <body>
     <header>
-        <h1>Welcome to My Portfolio</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="header-content">
+            <h1>Roshan Kumar Mukhiya</h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#media">Media</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <button class="theme-toggle" onclick="toggleTheme()" title="Toggle Dark Mode">🌓</button>
+            </nav>
+        </div>
     </header>
 
     <main>
-        <section id="about">
+        <section id="about" class="fade-section">
             <h2>About Me</h2>
-            <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExcTYydGE1bWluZGpvbWMwY2t5Zng3bThmZW9uZG53ZWc0MzMzOTVqMCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/KyAbvgaca37zwMh54p/giphy.gif" alt="Profile Picture" class="profile-pic" width="400" height="500">
-            <p>HI I'm Roshan Kumar Mukhiya, a Full Stack Developer and Computer Science student at Biratnagar International College (BIC), currently in my second year. I'm passionate about building dynamic, user-friendly web applications using JavaScript, React, Node.js, and Java, and aim to create innovative software that solves real-world problems</p>
-            <button class="btn btn-primary" onclick="downloadResume()">Download Resume</button>
+            <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExcTYydGE1bWluZGpvbWMwY2t5Zng3bThmZW9uZG53ZWc0MzMzOTVqMCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/KyAbvgaca37zwMh54p/giphy.gif" alt="Profile Picture" class="profile-pic">
+            <p class="about-text">
+                Hi! I'm Roshan Kumar Mukhiya, a Full Stack Developer and Computer Science student at Biratnagar International College (BIC), currently in my second year. I'm passionate about building dynamic, user-friendly web applications using JavaScript, React, Node.js, and Java, and aim to create innovative software that solves real-world problems.
+            </p>
+            <div class="button-group">
+                <button class="btn btn-primary" onclick="downloadResume()">
+                    <span>📄</span> Download Resume
+                </button>
+            </div>
         </section>
 
-        <section id="projects">
+        <section id="projects" class="fade-section">
             <h2>My Projects</h2>
             <div class="project">
                 <h3>Banking System</h3>
-                <p>I have created one banking system using Java in 2nd semester for final assignments.</p>
-                <button class="btn btn-secondary" onclick="viewProject('Banking System')">View Project</button>
+                <p>A comprehensive banking system developed using Java as a final assignment for the 2nd semester. Features include account management, transactions, and secure authentication.</p>
+                <div class="tech-stack">
+                    <span class="tech-badge">Java</span>
+                    <span class="tech-badge">OOP</span>
+                    <span class="tech-badge">File I/O</span>
+                </div>
+                <button class="btn btn-secondary" onclick="viewProject('Banking System')">
+                    View Project →
+                </button>
             </div>
+            
             <div class="project">
                 <h3>Smart Canteen System</h3>
-                <p>During sep, we have to create a system as a final work. It was group project so we created smart canteen system using HTML, CSS, JavaScript, MySQL, Node.js</p>
-                <button class="btn btn-secondary" onclick="viewProject('Smart Canteen System')">View Project</button>
+                <div class="project-image-wrapper">
+                    <img src="Smartcanteen.png" alt="Smart Canteen System" class="project-image-canteen">
+                </div>
+                <p>A full-stack web application for managing canteen operations, including menu management, order processing, and user authentication. Developed as a group project with modern web technologies.</p>
+                <div class="tech-stack">
+                    <span class="tech-badge">HTML/CSS</span>
+                    <span class="tech-badge">JavaScript</span>
+                    <span class="tech-badge">Node.js</span>
+                    <span class="tech-badge">MySQL</span>
+                </div>
+                <button class="btn btn-secondary" onclick="viewProject('Smart Canteen System')">
+                    View Project →
+                </button>
             </div>
         </section>
 
-        <section id="skills">
-            <h2>Skills</h2>
+        <section id="skills" class="fade-section">
+            <h2>Skills & Technologies</h2>
             <div class="skills-container">
-                <span class="skill-badge">JavaScript</span>
-                <span class="skill-badge">React</span>
-                <span class="skill-badge">Node.js</span>
-                <span class="skill-badge">Java</span>
-                <span class="skill-badge">MySQL</span>
-                <span class="skill-badge">HTML/CSS</span>
+                <div class="skill-category">
+                    <h3>Languages</h3>
+                    <div class="skill-badges">
+                        <span class="skill-badge">JavaScript</span>
+                        <span class="skill-badge">Java</span>
+                        <span class="skill-badge">C#</span>
+                        <span class="skill-badge">SQL</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Frontend</h3>
+                    <div class="skill-badges">
+                        <span class="skill-badge">HTML5</span>
+                        <span class="skill-badge">CSS3</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Backend & Database</h3>
+                    <div class="skill-badges">
+                        <span class="skill-badge">Node.js</span>
+                        <span class="skill-badge">MySQL</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Tools & Other</h3>
+                    <div class="skill-badges">
+                        <span class="skill-badge">Unity</span>
+                        <span class="skill-badge">Git</span>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section id="media">
+        <section id="media" class="fade-section">
             <h2>Media Gallery</h2>
-
-            
-            
             <div class="media-container">
-                <div class="video-section">
-                    <h3>Messi kick</h3>
-                    <video width="320" height="240" controls>
+                <div class="media-item video-section">
+                    <h3>🎬 Messi Kick</h3>
+                    <video controls>
                         <source src="Portfolio.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
                 </div>
 
-                <div class="audio-section">
-                    <h3>Nature Audio</h3>
+                <div class="media-item audio-section">
+                    <h3>🎵 Nature Audio</h3>
                     <audio controls>
                         <source src="Portfolio.mp3" type="audio/mpeg">
                         Your browser does not support the audio element.
                     </audio>
                 </div>
+
+                <div class="media-item canvas-section">
+                    <h3>🎨 Draw Here</h3>
+                    <canvas id="drawingCanvas"></canvas>
+                    <div class="canvas-controls">
+                        <div class="control-group">
+                            <label for="colorPicker">Color:</label>
+                            <input type="color" id="colorPicker" value="#6366f1">
+                        </div>
+                        <div class="control-group">
+                            <label for="brushSize">Size:</label>
+                            <input type="range" id="brushSize" min="1" max="20" value="5">
+                            <span id="brushSizeValue">5</span>
+                        </div>
+                        <button class="btn btn-small" onclick="clearCanvas()">Clear</button>
+                        <button class="btn btn-small" onclick="saveCanvas()">Save</button>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section id="contact">
-            <h2>Contact Me</h2>
-            <p>Email: roshanmukhiya77799@gmail.com</p>
-            <button class="btn btn-primary" onclick="sendEmail()">Send Email</button>
-            <button class="btn btn-outline" onclick="connectLinkedIn()">Connect on LinkedIn</button>
-            <button class="btn btn-outline" onclick="viewGitHub()">GitHub Profile</button>
+        <section id="contact" class="fade-section">
+            <h2>Get In Touch</h2>
+            <p class="contact-intro">Feel free to reach out for collaborations or just a friendly chat!</p>
+            <div class="contact-info">
+                <p>📧 <strong>Email:</strong> roshanmukhiya77799@gmail.com</p>
+            </div>
+            <div class="button-group">
+                <button class="btn btn-primary" onclick="sendEmail()">
+                    📧 Send Email
+                </button>
+                <button class="btn btn-outline" onclick="connectLinkedIn()">
+                    💼 LinkedIn
+                </button>
+                <button class="btn btn-outline" onclick="viewGitHub()">
+                    💻 GitHub
+                </button>
+            </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 My Portfolio</p>
+        <p>&copy; 2025 Roshan Kumar Mukhiya. All rights reserved.</p>
     </footer>
 
     <script src="portfolio.js"></script>
